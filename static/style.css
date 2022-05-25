@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    width:60%;
+    background-color: rgb(227, 216, 199);
+    margin:50px auto;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 3px grey;
+    padding: 40px;
+}
+img{
+    width:400px;
+    height:400px;
+}
+h1,h3,p{
+    text-align: center;
+}
+h1.message{
+    color:rgb(179, 58, 58)
+}
+p{
+    font-size: 16px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>GUESS MY NUMBER 🤔</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Guess a number and find the treasure🤔 </h1>
+    <h3>choose any number between 0-20 </h3>
+    {% if num==random_num: %}
+        <p>The number you chose is: {{num}} and the random number is: {{random_num}}</p>
+        <h1 class="message">You found the treasure 👏</h1>
+        <img src="https://media1.giphy.com/media/lXiRm5H49zYmHr3i0/200w.webp?cid=ecf05e4718cp4vhs0xos3clot6iwn0uox4n9iy7o03bb9xi6&rid=200w.webp&ct=g" alt="">
+    {% elif num >random_num %}
+        <h1 class="message">wrong guess, you went too high.try again </h1>
+        <p>The number you chose is: {{num}} and the random number is: {{random_num}}</p>
+        <img src="https://media0.giphy.com/media/CoND5j6Bn1QZUgm1xX/200w.webp?cid=ecf05e47649ztjp1ieisrp84n3xghawtjvdjrw6i7fndzr22&rid=200w.webp&ct=g" alt="">
+    {% else %}
+        <h1 class="message">wrong guess, you went too low.try again </h1>
+        <p>The number you chose is: {{num}} and the random number is: {{random_num}}</p>
+        <img src="https://media0.giphy.com/media/CoND5j6Bn1QZUgm1xX/200w.webp?cid=ecf05e47649ztjp1ieisrp84n3xghawtjvdjrw6i7fndzr22&rid=200w.webp&ct=g" alt="">
+        {% endif %}
+    </div>
+</body>
+</html>
